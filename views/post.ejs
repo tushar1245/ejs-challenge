@@ -1,0 +1,21 @@
+<%- include('partials/header'); %>
+
+
+
+
+<% for(let i=0;i<postsCopy.length;i++){ %>
+    <%if(postsCopy[i].title === postTitle){%>
+        <h1><%=postTitle%></h1>
+        <p><%=postsCopy[i].content%></p>
+    <%}%>
+<%}%>
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer'); %>

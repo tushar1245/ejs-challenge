@@ -1,0 +1,18 @@
+
+
+<%- include('partials/header'); %>
+
+
+<h1>Home</h1>
+<p> <%= startingContent %> </p>
+
+<% console.log(postsCopy) %>
+
+<% for(let i=0; i<postsCopy.length; i++){ %>
+    <h1> <%= postsCopy[i].title %> </h1>
+    <p> <%= postsCopy[i].content.substr(0,100) + "...  " %> </p>
+    <% const linkk = "/post/" + postsCopy[i].title; %>
+    <a href="<%=linkk%>">Read More</a>
+<%}%>
+
+<%- include('partials/footer'); %>
